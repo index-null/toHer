@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>To 小黃鱼</title>
+    <!-- 引入 ECharts 文件 -->
+    <script src="https://chuhsing-blog-bucket.oss-cn-shenzhen.aliyuncs.com/chuhsing/202411091046682.js"></script>
+    <!-- 引入 词云 文件 -->
+    <script src="https://chuhsing-blog-bucket.oss-cn-shenzhen.aliyuncs.com/chuhsing/202411091226365.js"></script>
+    <!-- bar.js  index.html  line.js  pie.js  ring.js  updatetime.js  wordcloud.js -->
+    <link rel="stylesheet" href="https://chuhsing-blog-bucket.oss-cn-shenzhen.aliyuncs.com/chuhsing/202411091437276.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="section">
+            <div class="intro-text"><span style="color: purple;">大老婆</span>,我们第一次聊天在:</div>
+            <div class="time-container" style="color: blue;">
+                2024-07-01 10:12:49
+            </div>
+            <div class="intro-text">距今已有:</div>
+            <div id="duration" class="time-container" style="color: blue;"></div>
+            <div class="intro-text">聊天天数:</div>
+            <div class="time-container" style="color: orange;">
+                97 天
+            </div>
+            <div class="intro-text">用的最多的词:</div>
+            <div class="time-container" style="color: red;">
+                哈哈哈
+            </div>
+            <div class="intro-text">总字数:</div>
+            <div class="time-container" style="color: blueviolet;">
+                107989
+            </div>
+            <div class="intro-text">活跃时段:</div>
+            <div class="time-container" style="color: #6a7c19;">
+                00:00-02:00
+            </div>
+            <div class="intro-text">这些日子,我们一共发送了</div>
+            <div id="total_msg_num" class="time-container" style="color: blue;">17933</div>
+            <div class="intro-text">条消息</div>
+            <div class="intro-text" style="color: blueviolet;">听着大老婆爱的歌,我们开始吧!(ps:大老婆你自己点一下,我就不帮你自动放了,哈哈哈)</div>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <img src="https://chuhsing-blog-bucket.oss-cn-shenzhen.aliyuncs.com/chuhsing/202411091442906.jpg" alt="大老婆我爱你" style="width: 64px; height: 64px;">
+                <audio controls style="margin-left: 16px;">
+                  <source src="https://chuhsing-blog-bucket.oss-cn-shenzhen.aliyuncs.com/chuhsing/202411091444953.flac" type="audio/mpeg">
+                  大老婆,手机你这里不支持显示我的音乐控件,要不要试试电脑
+                </audio>
+            </div>
+
+        </div>
+        <div class="section">
+            <div class="chart-container" id="bar-chart"></div>
+            <div class="note">从八月到十月,我们的爱与日俱增,这个月会是多少呢?</div>
+        </div>
+
+        <div class="section">
+            <div class="chart-container" id="word-cloud"></div>
+            <div class="note">原来是哈哈哥和哈哈姐谈上了,我们真的很快乐!!!(有没有偷偷用哈哈敷衍我?!!)</div>
+        </div>
+
+        <div class="section">
+            <div class="chart-container" id="ring-chart"></div>
+            <div class="note">我们每周,无论哪天都是一样充满爱意滴!大老婆我每天都很爱很爱你!</div>
+        </div>
+
+        <div class="section">
+            <div class="chart-container" id="line-chart"></div>
+            <div class="note">大老婆,原来我们都是夜猫子(其实就是某人喜欢半夜涩涩)</div>
+        </div>
+
+        <div class="section">
+            <div class="chart-container" id="pie-chart"></div>
+            <div class="note">喜欢大老婆分享的每一张照片,发的每一条语音,说的每一句话!
+
+            </div>
+            <span style="color: red;">所以大老婆可以看看腿吗?</span>
+            <button class="abs-bt" id="yes-bt">可以</button>
+            <button class="abs-bt" id="no-bt">不可以</button>
+        </div>
+
+        <div class="section">
+            <div class="chart-container" id="pie-chart2"></div>
+            <div class="note">我爱你略胜一筹哦!!!我的大老婆</div>
+        </div>
+        <div class="section">
+            <div class="img-box">
+                <img src="https://chuhsing-blog-bucket.oss-cn-shenzhen.aliyuncs.com/chuhsing/202411091359052.png" alt="">
+            </div>
+            <div class="note">至今我也不知道它是什么意思,哈哈哈哈哈哈哈哈哈</div>
+        </div>
+    </div>
+    <script src="https://chuhsing-blog-bucket.oss-cn-shenzhen.aliyuncs.com/chuhsing/202411091431579.js"></script>
+    <script src="https://chuhsing-blog-bucket.oss-cn-shenzhen.aliyuncs.com/chuhsing/202411091431854.js"></script>
+    <script src="https://chuhsing-blog-bucket.oss-cn-shenzhen.aliyuncs.com/chuhsing/202411091432282.js"></script>
+    <script src="https://chuhsing-blog-bucket.oss-cn-shenzhen.aliyuncs.com/chuhsing/202411091432353.js"></script>
+    <script src="https://chuhsing-blog-bucket.oss-cn-shenzhen.aliyuncs.com/chuhsing/202411091432492.js"></script>
+    <script src="https://chuhsing-blog-bucket.oss-cn-shenzhen.aliyuncs.com/chuhsing/202411091432536.js"></script>
+    <script>
+        document.getElementById('yes-bt').addEventListener('click', function() {
+            alert('我就知道你最好了,大老婆!发到我的微信吧!');
+        });
+
+        document.getElementById('no-bt').addEventListener('mouseover', function() {
+            this.style.display = 'none';
+            alert('大老婆你想干嘛?!!!!我就要看嘛!!再给你一次机会,反正你还没点不可以!');
+        });
+    </script>
+</body>
+
+</html>
